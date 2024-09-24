@@ -6,45 +6,43 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-const Header = () => {
-  // Navbar toggle
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+// Mock user login status for now
+const isLoggedIn = false; // You can replace this with actual login check logic
 
-  // Sticky Navbar
+const Header = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const navbarToggleHandler = () => setNavbarOpen(!navbarOpen);
+
+  // Sticky Navbar and color change
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
+    setSticky(window.scrollY >= 80);
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-    return () => window.removeEventListener("scroll", handleStickyNavbar); // Clean up the event listener on unmount
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
   }, []);
 
-  // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
-  };
+  const handleSubmenu = (index) =>
+    setOpenIndex(openIndex === index ? -1 : index);
 
   const usePathName = usePathname();
+
+  const handleBookACall = () => {
+    if (isLoggedIn) {
+      window.location.href = "/register";
+    } else {
+      window.location.href = "/signin"; // Or your sign-up route
+    }
+  };
 
   return (
     <>
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
+            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-md transition dark:bg-transparent dark:shadow-sticky-dark"
             : "absolute bg-transparent"
         }`}
       >
@@ -55,7 +53,7 @@ const Header = () => {
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
+                }`}
               >
                 <Image
                   src="/images/logo/chessapex-black.svg"
@@ -157,35 +155,15 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 flex flex-col gap-2 lg:hidden">
-                    <Link
-                      href="/signup"
-                      className="flex justify-center rounded-full bg-primary px-8 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-primary/80"
-                    >
-                      Sign Up
-                    </Link>
-                    <Link
-                      href="/signin"
-                      className="flex justify-center rounded-full  bg-black  px-8 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-black/90"
-                    >
-                      Sign In
-                    </Link>
-                  </div>
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                <button
+                  onClick={handleBookACall}
+                  className="hidden rounded-full bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up hidden rounded-full bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
+                  Book a Class
+                </button>
                 <div>
                   <ThemeToggler />
                 </div>
