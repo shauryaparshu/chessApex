@@ -9,11 +9,11 @@ const PricingBox = (props: {
 
   return (
     <div className="w-full">
-      <div className="relative z-10 rounded-lg bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
+      <div className="relative z-10 rounded-xl bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-zinc-900 dark:shadow-two dark:hover:shadow-orange-400">
         <div className="flex items-center justify-between">
           <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-lg font-medium text-body-color">
+            ₹<span className="amount">{price}</span>
+            <span className="time text-lg font-medium text-slate-900 dark:text-gray-400">
               /{duration}
             </span>
           </h3>
@@ -21,8 +21,10 @@ const PricingBox = (props: {
             {packageName}
           </h4>
         </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
+        <p className="mb-7 text-base text-slate-900 dark:text-gray-400">
+          {subtitle}
+        </p>
+        <div className="mb-8 border-b border-opacity-10 pb-8 text-gray-600 dark:border-white dark:border-opacity-10">
           <button className="flex w-full items-center justify-center rounded-full bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             Start Free Trial
           </button>
@@ -55,8 +57,8 @@ const PricingBox = (props: {
                 y2="83.2919"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#FF520E" stopOpacity="0.7" />
+                <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_70:153"
@@ -66,8 +68,8 @@ const PricingBox = (props: {
                 y2="103.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#FF520E" stopOpacity="0.7" />
+                <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

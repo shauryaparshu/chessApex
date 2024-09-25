@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Affordable Chess Coaching Plans"
+          paragraph="Join ChessApex to elevate your chess game with expert coaching at a price that suits you. Flexible monthly and yearly plans available."
           center
           width="665px"
         />
@@ -48,7 +48,7 @@ const Pricing = () => {
               onClick={() => setIsMonthly(false)}
               className={`${
                 isMonthly
-                  ? "text-dark dark:text-white"
+                  ? "text-gray-300 dark:text-white"
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
@@ -59,43 +59,45 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Beginner"
+            price={isMonthly ? "499" : "3,999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Perfect for beginners to learn chess fundamentals."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Weekly group sessions" status="active" />
+            <OfferList text="Access to recorded lessons" status="active" />
+            <OfferList text="Basic opening strategies" status="active" />
+            <OfferList text="Email support" status="active" />
+            <OfferList text="Tactics and puzzle exercises" status="inactive" />
+            <OfferList text="Game analysis" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Intermediate"
+            price={isMonthly ? "999" : "10,999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="For players looking to refine their strategies and tactics."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Bi-weekly group sessions" status="active" />
+            <OfferList text="Access to recorded lessons" status="active" />
+            <OfferList text="Advanced opening theory" status="active" />
+            <OfferList text="Game analysis" status="active" />
+            <OfferList text="1-on-1 feedback sessions" status="inactive" />
+            <OfferList text="Endgame mastery" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Advanced"
+            price={isMonthly ? "1,499" : "15,999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="For advanced players aiming to master their game."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Weekly 1-on-1 sessions" status="active" />
+            <OfferList text="Access to all recorded lessons" status="active" />
+            <OfferList text="Complete opening repertoire" status="active" />
+            <OfferList text="Game analysis and feedback" status="active" />
+            <OfferList text="Personalized study plans" status="active" />
+            <OfferList text="Tournament preparation" status="active" />
           </PricingBox>
         </div>
       </div>
@@ -137,8 +139,8 @@ const Pricing = () => {
               y2="1131.65"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#FF520E" />
+              <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_93:235"
@@ -148,8 +150,8 @@ const Pricing = () => {
               y2="915.952"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#FF520E" />
+              <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
