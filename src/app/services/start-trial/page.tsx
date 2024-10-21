@@ -35,9 +35,10 @@ const TrialClassPage = () => {
               </h2>
               <p className="mt-4 text-lg text-body-color dark:text-gray-300">
                 Our trial class is designed to introduce you to the world of
-                chess. You’ll learn basic moves, strategies, and get to know how
-                to think like a chess player. It's a fun and interactive session
-                with an expert trainer guiding you every step of the way.
+                chess. You&apos;ll learn basic moves, strategies, and get to
+                know how to think like a chess player. It&apos;s a fun and
+                interactive session with an expert trainer guiding you every
+                step of the way.
               </p>
               <p className="mt-4 text-lg text-body-color dark:text-gray-300">
                 After completing this class, you will have a strong foundation
