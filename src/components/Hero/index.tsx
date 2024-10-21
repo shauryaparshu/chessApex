@@ -5,7 +5,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="bg-bg-light relative z-10 overflow-hidden pb-16 pt-[120px] dark:bg-bg-color-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-bg-light pb-16 pt-[120px] dark:bg-bg-color-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -26,11 +26,11 @@ const Hero = () => {
                     href="/register"
                     className="transform rounded-full bg-primary px-8 py-4 text-base font-semibold text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-primary/80"
                   >
-                    Book a Class
+                    Book Free Trial
                   </Link>
                   <Link
-                    href="/learn-more"
-                    className="inline-block transform rounded-full bg-black px-8 py-4 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:scale-105 dark:hover:bg-white/5"
+                    href="/services"
+                    className="inline-block transform rounded-full bg-black px-8 py-4 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-black/90 dark:bg-white/5 dark:text-white dark:hover:scale-105 dark:hover:bg-white/5"
                   >
                     Learn More
                   </Link>

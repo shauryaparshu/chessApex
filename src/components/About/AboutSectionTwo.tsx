@@ -1,9 +1,16 @@
 import Image from "next/image";
+import SectionTitle from "../Common/SectionTitle";
 
 const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
+        <SectionTitle
+          title="Why Choose ChessApex?"
+          paragraph="At ChessApex, we unlock your potential through chess with expert trainers, personalized lessons, and a comprehensive curriculum for all skill levels."
+          center
+          mb="80px"
+        />
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div
@@ -11,16 +18,16 @@ const AboutSectionTwo = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/about/about-image-2.svg"
+                src="/images/about/about-2.jpg"
                 alt="about image"
                 fill
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                className="rounded-lg drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
-                src="/images/about/about-image-2-dark.svg"
+                src="/images/about/about-2.jpg"
                 alt="about image"
                 fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                className="hidden rounded-lg drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
           </div>
@@ -28,29 +35,29 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  Expert Coaching
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color dark:text-gray-400 sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Learn from internationally recognized chess masters with years
+                  of experience.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  Personalized Learning Paths
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color dark:text-gray-400 sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  Tailored lessons based on individual skill levels to
+                  accelerate progress.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  Interactive Live Sessions
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color dark:text-gray-400 sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  Engage in dynamic and real-time training sessions that enhance
+                  learning and retention
                 </p>
               </div>
             </div>

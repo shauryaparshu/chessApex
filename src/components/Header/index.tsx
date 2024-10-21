@@ -111,7 +111,7 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base font-bold lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
+                                ? "text-primary "
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
@@ -160,9 +160,9 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <button
                   onClick={handleBookACall}
-                  className="hidden rounded-full bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
+                  className="hidden rounded-full bg-primary px-5 py-3 text-base font-medium text-white shadow-btn transition duration-300 ease-in-out hover:scale-105 hover:bg-primary/80  md:block md:px-5 lg:px-6 xl:px-5"
                 >
-                  Book a Class
+                  Get Started
                 </button>
                 <div>
                   <ThemeToggler />
