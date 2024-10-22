@@ -12,6 +12,10 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
+        path={[
+          { name: "Home", href: "/" },
+          { name: "Support", href: "/contact" },
+        ]}
         pageName="Contact Page"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />

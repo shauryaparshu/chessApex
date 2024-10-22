@@ -3,9 +3,11 @@ import Link from "next/link";
 const Breadcrumb = ({
   pageName,
   description,
+  path,
 }: {
   pageName: string;
   description: string;
+  path: { name: string; href: string }[]; // Accepting the path as an array of objects
 }) => {
   return (
     <>
@@ -17,7 +19,7 @@ const Breadcrumb = ({
                 <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   {pageName}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
+                <p className="text-base font-medium leading-relaxed text-body-color dark:text-gray-300">
                   {description}
                 </p>
               </div>
@@ -25,18 +27,23 @@ const Breadcrumb = ({
             <div className="w-full px-4 md:w-4/12 lg:w-5/12">
               <div className="text-end">
                 <ul className="flex items-center md:justify-end">
-                  <li className="flex items-center">
-                    <Link
-                      href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-primary"
-                    >
-                      Home
-                    </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
-                  </li>
-                  <li className="text-base font-medium text-primary">
-                    {pageName}
-                  </li>
+                  {path.map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <Link
+                        href={item.href}
+                        className={`pr-1 text-base font-medium ${
+                          index === path.length - 1
+                            ? "text-primary" // Apply text-primary to the last item
+                            : "text-body-color hover:text-primary dark:text-gray-300"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                      {index < path.length - 1 && (
+                        <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -53,21 +60,21 @@ const Breadcrumb = ({
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                opacity="0.1"
+                opacity="0.3"
                 d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
-                fill="url(#paint0_linear_111:578)"
+                fill="url(#paint0_linear)"
               />
               <defs>
                 <linearGradient
-                  id="paint0_linear_111:578"
+                  id="paint0_linear"
                   x1="-40.5"
                   y1="117"
                   x2="301.926"
                   y2="-97.1485"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#FF520E" />
+                  <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -81,12 +88,12 @@ const Breadcrumb = ({
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                opacity="0.1"
+                opacity="0.3"
                 d="M669.125 257.002L345.875 31.9983L524.571 -15.8832L669.125 257.002Z"
                 fill="url(#paint0_linear_0:1)"
               />
               <path
-                opacity="0.1"
+                opacity="0.3"
                 d="M0.0716344 182.78L101.988 -15.0769L142.154 81.4093L0.0716344 182.78Z"
                 fill="url(#paint1_linear_0:1)"
               />
@@ -99,8 +106,8 @@ const Breadcrumb = ({
                   y2="37.0429"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#FF520E" />
+                  <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_0:1"
@@ -110,8 +117,8 @@ const Breadcrumb = ({
                   y2="32.3398"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                  <stop stopColor="#FF520E" />
+                  <stop offset="1" stopColor="#FF520E" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>

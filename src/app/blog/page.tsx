@@ -13,6 +13,10 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
+        path={[
+          { name: "Home", href: "/" },
+          { name: "blogs", href: "/blog" },
+        ]}
         pageName="Blog Grid"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />

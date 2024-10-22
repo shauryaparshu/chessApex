@@ -54,6 +54,10 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
+        path={[
+          { name: "Home", href: "/" },
+          { name: "About", href: "/about" },
+        ]}
         pageName="About Page"
         description="Learn more about our expert chess trainer and the programs offered."
       />
